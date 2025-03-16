@@ -1,0 +1,11 @@
+version: '3'
+services:
+  structurizr-lite:
+    image: structurizr/lite
+    container_name: structurizr-lite
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./workspace:/usr/local/structurizr
+    environment:
+      - STRUCTURIZR_WORKSPACE_PATH=/usr/local/structurizr/workspace.dsl
